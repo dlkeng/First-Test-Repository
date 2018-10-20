@@ -11,145 +11,79 @@
 
 #include "cpu_list.h"
 
-#include "asm/common.h"
-
-#ifdef ENABLE_1802
 #include "asm/1802.h"
-#include "disasm/1802.h"
-#endif
-#ifdef ENABLE_4004
 #include "asm/4004.h"
-#include "disasm/4004.h"
-#endif
-#ifdef ENABLE_6502
 #include "asm/6502.h"
-#include "disasm/6502.h"
-#include "simulate/6502.h"
-#endif
-#ifdef ENABLE_65816
 #include "asm/65816.h"
-#include "disasm/65816.h"
-#include "simulate/65816.h"
-#endif
-#ifdef ENABLE_6800
 #include "asm/6800.h"
-#include "disasm/6800.h"
-#endif
-#ifdef ENABLE_6809
 #include "asm/6809.h"
-#include "disasm/6809.h"
-#endif
-#ifdef ENABLE_68HC08
 #include "asm/68hc08.h"
-#include "disasm/68hc08.h"
-#endif
-#ifdef ENABLE_68000
 #include "asm/68000.h"
-#include "disasm/68000.h"
-#endif
-#ifdef ENABLE_8051
 #include "asm/8051.h"
-#include "disasm/8051.h"
-#endif
-#ifdef ENABLE_ARC
 #include "asm/arc.h"
-#include "disasm/arc.h"
-#endif
-#ifdef ENABLE_ARM
 #include "asm/arm.h"
-#include "disasm/arm.h"
-#ifdef ENABLE_AVR8
-#endif
 #include "asm/avr8.h"
-#include "disasm/avr8.h"
-#include "simulate/avr8.h"
-#endif
-#ifdef ENABLE_CELL
 #include "asm/cell.h"
-#include "disasm/cell.h"
-#endif
-#ifdef ENABLE_CP1610
 #include "asm/cp1610.h"
-#include "disasm/cp1610.h"
-#endif
-#ifdef ENABLE_DSPIC
+#include "asm/common.h"
 #include "asm/dspic.h"
-#include "disasm/dspic.h"
-#endif
-#ifdef ENABLE_EPIPHANY
 #include "asm/epiphany.h"
-#include "disasm/epiphany.h"
-#endif
-#ifdef ENABLE_LC3
 #include "asm/lc3.h"
-#include "disasm/lc3.h"
-#include "simulate/lc3.h"
-#endif
-#ifdef ENABLE_MIPS
 #include "asm/mips.h"
-#include "disasm/mips.h"
-#include "simulate/mips.h"
-#endif
-#ifdef ENABLE_MSP430
 #include "asm/msp430.h"
-#include "disasm/msp430.h"
-#include "simulate/msp430.h"
-#endif
-#ifdef ENABLE_PDP8
 #include "asm/pdp8.h"
-#include "disasm/pdp8.h"
-#endif
-#ifdef ENABLE_PIC14
 #include "asm/pic14.h"
-#include "disasm/pic14.h"
-#endif
-#ifdef ENABLE_POWERPC
 #include "asm/powerpc.h"
-#include "disasm/powerpc.h"
-#endif
-#ifdef ENABLE_PROPELLER
 #include "asm/propeller.h"
-#include "disasm/propeller.h"
-#endif
-#ifdef ENABLE_EMOTION_ENGINE
 #include "asm/ps2_ee_vu.h"
-#include "disasm/ps2_ee_vu.h"
-#endif
-#ifdef ENABLE_RISCV
 #include "asm/riscv.h"
-#include "disasm/riscv.h"
-#endif
-#ifdef ENABLE_STM8
 #include "asm/stm8.h"
-#include "disasm/stm8.h"
-#include "simulate/stm8.h"
-#endif
-#ifdef ENABLE_SUPER_FX
 #include "asm/super_fx.h"
-#include "disasm/super_fx.h"
-#endif
-#ifdef ENABLE_SWEET16
 #include "asm/sweet16.h"
-#include "disasm/sweet16.h"
-#endif
-#ifdef ENABLE_THUMB
 #include "asm/thumb.h"
-#include "disasm/thumb.h"
-#endif
-#ifdef ENABLE_TMS1000
 #include "asm/tms1000.h"
-#include "disasm/tms1000.h"
-#endif
-#ifdef ENABLE_TMS9900
 #include "asm/tms9900.h"
-#include "disasm/tms9900.h"
-#include "simulate/tms9900.h"
-#endif
-#ifdef ENABLE_Z80
 #include "asm/z80.h"
+#include "disasm/1802.h"
+#include "disasm/4004.h"
+#include "disasm/6502.h"
+#include "disasm/65816.h"
+#include "disasm/6800.h"
+#include "disasm/6809.h"
+#include "disasm/68hc08.h"
+#include "disasm/68000.h"
+#include "disasm/8051.h"
+#include "disasm/arc.h"
+#include "disasm/arm.h"
+#include "disasm/avr8.h"
+#include "disasm/cell.h"
+#include "disasm/cp1610.h"
+#include "disasm/dspic.h"
+#include "disasm/epiphany.h"
+#include "disasm/lc3.h"
+#include "disasm/mips.h"
+#include "disasm/msp430.h"
+#include "disasm/pdp8.h"
+#include "disasm/pic14.h"
+#include "disasm/powerpc.h"
+#include "disasm/propeller.h"
+#include "disasm/ps2_ee_vu.h"
+#include "disasm/riscv.h"
+#include "disasm/stm8.h"
+#include "disasm/super_fx.h"
+#include "disasm/sweet16.h"
+#include "disasm/thumb.h"
+#include "disasm/tms1000.h"
+#include "disasm/tms9900.h"
 #include "disasm/z80.h"
+#include "simulate/6502.h"
+#include "simulate/65816.h"
+#include "simulate/avr8.h"
+#include "simulate/lc3.h"
+#include "simulate/mips.h"
+#include "simulate/msp430.h"
+#include "simulate/tms9900.h"
 #include "simulate/z80.h"
-#endif
 
 #define NO_FLAGS 0
 
